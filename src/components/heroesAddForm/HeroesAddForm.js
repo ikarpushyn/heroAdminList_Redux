@@ -1,4 +1,3 @@
-
 import { useHttp } from '../../hooks/http.hook';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -12,7 +11,7 @@ const HeroesAddForm = () => {
 	const [heroDescr, setHeroDescr] = useState('');
 	const [heroElement, setHeroElement] = useState('');
 
-	const { filters, filtersLoadingStatus } = useSelector((state) => state);
+	const { filters, filtersLoadingStatus } = useSelector((state) => state.filters);
 	const dispatch = useDispatch();
 	const { request } = useHttp();
 
@@ -26,10 +25,10 @@ const HeroesAddForm = () => {
 			element: heroElement,
 		};
 
-		//Удаление из массива
+		//Добавление  на массива
 		// dispatch(heroCreated(newHero));
 
-		//удаление с "сервера"
+		//Добавление на  "сервера"
 		request(`http://localhost:3001/heroes/`, 'POST', JSON.stringify(newHero))
 			.then((res) => console.log(res, 'Success'))
 			.then(dispatch(heroCreated(newHero)))
