@@ -13,10 +13,28 @@
       "element": "water"
     },
     {
-      "id": 122,
-      "name": "Первый герой",
-      "description": "Первый герой в рейтинге!",
+      "id": "1cd3a3cd-10e2-4d9b-80c5-44b2a0568832",
+      "name": "wqe",
+      "description": "dfsdsf",
       "element": "fire"
+    },
+    {
+      "id": "e6bc8120-5858-4b42-a770-f1f0529d361a",
+      "name": "asdasads",
+      "description": "adssaddas",
+      "element": "all"
+    },
+    {
+      "id": "855f4cbe-2d5a-4487-8660-6532ea6cdcfd",
+      "name": "asdsaddas",
+      "description": "adsdassd",
+      "element": "water"
+    },
+    {
+      "id": "2bfe5b94-9d80-4533-915e-56a06e9099a2",
+      "name": "adssaddsa",
+      "description": "asddassad",
+      "element": "earth"
     }
   ],
   "filters": [
