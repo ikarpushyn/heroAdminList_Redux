@@ -1,20 +1,23 @@
-import { useHttp } from '../../hooks/http.hook';
+// import { useHttp } from '../../hooks/http.hook';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import classNames from 'classnames';
+import store from '../../store';
 
-import { activeFilterChanged, fetchFilters } from '../../actions';
+import { filterChanged, fetchFilters, selectAll } from './filterSlice';
 
 import Spinner from '../spinner/Spinner';
 
 const HeroesFilters = () => {
-	const { filters, filtersLoadingStatus, activeFilter } = useSelector((state) => state.filters);
+	const { filtersLoadingStatus, activeFilter } = useSelector((state) => state.filters);
+
+	const filters = selectAll(store.getState());
 	const dispatch = useDispatch();
-	const { request } = useHttp();
+	// const { request } = useHttp();
 
 	// Запрос на сервер для получения фильтров и последовательной смены состояния
 	useEffect(() => {
-		dispatch(fetchFilters(request));
+		dispatch(fetchFilters());
 
 		// eslint-disable-next-line
 	}, []);
@@ -40,7 +43,7 @@ const HeroesFilters = () => {
 					key={name}
 					id={name}
 					className={btnClass}
-					onClick={() => dispatch(activeFilterChanged(name))}
+					onClick={() => dispatch(filterChanged(name))}
 				>
 					{label}
 				</button>
