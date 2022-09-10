@@ -19,12 +19,6 @@
       "element": "water"
     },
     {
-      "id": "81a1898b-85ec-4829-908b-c9f330eb67c5",
-      "name": "asdasdasdasdas",
-      "description": "asdsadas",
-      "element": "earth"
-    },
-    {
       "id": "cb173565-761f-41db-a76f-17e90795fe78",
       "name": "fdsdsffds",
       "description": "sdfdfssfdfds",
@@ -34,6 +28,12 @@
       "id": "71dca8c6-6d2e-4d37-85af-255e6540ac42",
       "name": "asdasdsad",
       "description": "dsaasdasddsaasd",
+      "element": "fire"
+    },
+    {
+      "id": "2f2132b5-9e0e-4f03-b28d-63dd3e0291a2",
+      "name": "xzx\\z\\x",
+      "description": "\\zxzx\\\\xz",
       "element": "fire"
     }
   ],
