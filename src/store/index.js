@@ -11,13 +11,6 @@ const stringMiddleware = () => (next) => (action) => {
 	return next(action);
 };
 
-// const store = createStore(
-// 	combineReducers({ heroes: heroes, filters: filters }),
-// 	compose(
-// 		applyMiddleware(ReduxThunk, stringMiddleware),
-// 		window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-// 	)
-// );
 
 const store = configureStore({
 	reducer: { heroes: heroes, filters: filters },
@@ -27,4 +20,3 @@ const store = configureStore({
 
 export default store;
 
-//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()

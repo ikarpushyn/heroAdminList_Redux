@@ -13,7 +13,7 @@ const HeroesFilters = () => {
 
 	const filters = selectAll(store.getState());
 	const dispatch = useDispatch();
-	// const { request } = useHttp();
+	
 
 	// Запрос на сервер для получения фильтров и последовательной смены состояния
 	useEffect(() => {
